@@ -1,0 +1,31 @@
+<div class="upcoming-events-tab">
+    <div class="content">
+    <h5 class="event-tab-header"*ngIf="from=='dashboard'">Current {{ type }}</h5>
+    <p class="event-tab-content-wrn" *ngIf="totalEvents.length==0 && type=='Events' && from=='dashboard'">There is no {{ type.toLowerCase() }} going on today</p>
+    
+    <div *ngIf="from!='dashboard'">
+    <h5 class="event-tab-header" *ngIf="type!='' && from!='dashboard'">Upcoming {{ type }}</h5>
+    </div>
+    <p class="event-tab-content-wrn" *ngIf="((type!='Events' && totalUsers.length==0) || (type=='Events' && totalEvents.length==0)) && type!='' && from!='dashboard'">There is no upcoming {{ type.toLowerCase() }} in next 7 days</p>
+    <div *ngIf="from=='birthday-anniversary'">
+        <div class="upcoming-events" *ngFor="let user of totalUsers">
+            <div class="d-flex justify-content-start birthday-txt">
+            <p *ngIf="type == 'Birthdays'">{{ user.fullName }}'s Birthday</p>
+            <p *ngIf="type == 'Work Anniversaries'">{{ user.fullName }}'s Work Anniversary</p>
+            </div>
+            <div class="d-flex justify-content-end birthday-txt">
+        <p>{{ getBirthdayAnniversaryDate(user.dateOfBirth) }}</p>
+            </div>
+        </div>
+</div>
+<div *ngIf="from=='events' || from =='dashboard'">
+    <div class="upcoming-events" *ngFor="let event of totalEvents">
+        <div class="d-flex justify-content-start birthday-txt">
+        <p>{{ event.eventHeader }}</p>
+        </div>
+        <div class="d-flex justify-content-end birthday-txt">
+    <p>{{ event.eventStartDate }}</p>
+        </div>
+    </div>
+</div>
+</div>

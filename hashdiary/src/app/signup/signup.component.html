@@ -1,0 +1,121 @@
+<div class="form-header">
+  <h1>Register User</h1>
+</div>
+<form class="signup-form" [formGroup]="registerForm" (ngSubmit)="registerUser()">
+  <div class="form-body">
+    <div class="horizontal-group">
+      <div class="form-group horizontal-group">
+        <label for="userName" class="label-title">User name *</label>
+        <input type="text" id="userName" class="form-input" placeholder="enter your user name" required="required" formControlName="userName"/>
+        <span class="text-danger"
+                                *ngIf="(f.userName.touched || submitted) && f.userName.errors?.required">
+                                Name is required
+                            </span>
+    </div>
+      <div class="form-group left">
+          <label for="fullName" class="label-title">Full name *</label>
+          <input type="text" id="fullName" class="form-input" placeholder="enter your full name" required="required" formControlName="fullName"/>
+          <span class="text-danger"
+                                *ngIf="(f.fullName.touched || submitted) && f.fullName.errors?.required">
+                                Full name is required
+                            </span>
+      </div>
+      <div class="form-group right">
+        <label for="contactNumber" class="label-title">Contact Number *</label>
+        <input type="text" id="contactNumber" class="form-input" placeholder="enter your Contact Number" required="required" formControlName="contactNumber"/>
+        <span class="text-danger"
+                                *ngIf="(f.contactNumber.touched || submitted) && f.contactNumber.errors?.required">
+                                Contact Number is required
+                            </span>
+      </div>
+          <div class="form-group horizontal-group">
+            <label for="email" class="label-title">Email*</label>
+            <input type="email" id="email" class="form-input" placeholder="enter your email" required="required" formControlName="email">
+            <span class="text-danger"
+                                *ngIf="(f.email.touched || submitted) && f.email.errors?.required">
+                                Email is required
+                            </span>
+                            <span class="text-danger"
+                                *ngIf="f.email.touched && f.email.errors?.email">
+                                Enter a valid email address
+                            </span>
+          </div>
+          <div class="horizontal-group">
+
+            <div class="form-group left">
+              <label for="c" class="label-title">Password *</label>
+              <input type="password" id="password" class="form-input" placeholder="enter your password" required="required" formControlName="password">
+              <span class="text-danger"
+                                *ngIf="(f.password.touched || submitted) && f.password.errors?.required">
+                                Password cannot be empty
+                            </span>
+            </div>
+
+            <div class="form-group right">
+              <label for="confirm-password" class="label-title" required="required">Confirm Password *</label>
+              <input type="password" class="form-input" id="confirmPassword" placeholder="enter your password again" required="required" formControlName="confirmPassword">
+              <span class="text-danger"
+                                *ngIf="(f.confirmPassword.touched || submitted) && f.confirmPassword.errors?.required">
+                                Password cannot be empty
+                            </span>
+            </div>
+            <div class="horizontal-group">
+
+              <div class="form-group">
+                <label for="c" class="label-title">Address</label>
+                <textarea class="form-input" rows="4" cols="50" style="height:auto" formControlName="address"></textarea>
+                <span class="text-danger"
+                                *ngIf="(f.address.touched || submitted) && f.address.errors?.required">
+                                Password cannot be empty
+                            </span>
+              </div>
+              <div class="form-group left">
+              <label for="birthday" class="label-title-little">Birthday*:    </label>
+                <input type="date" id="birthday" name="birthday" formControlName="birthday">
+                <span class="text-danger"
+                                *ngIf="(f.birthday.touched || submitted) && f.birthday.errors?.required">
+                                Date of Birth cannot be empty
+                            </span>
+                          </div>
+              <div class="form-group left">
+              <label for="joiningDate" class="label-title-little">Joining Date*:   </label>
+                <input type="date" id="joiningDate" name="joiningDate" formControlName="joiningDate">
+                <span class="text-danger"
+                *ngIf="(f.joiningDate.touched || submitted) && f.joiningDate.errors?.required">
+                Date of Joining  cannot be empty
+            </span>
+              </div>
+
+                  <div class="form-group left">
+                    <label class="label-title">Role: *</label>
+                    <div class="radio-group" >
+                        <label for="HR" class="label-title-little">
+                            <input type="radio" value="HR" id="HR" formControlName="roleDetail">  HR   </label>
+                        <label for="Employee" class="label-title-little">
+                            <input type="radio" id="Employee" value="normal" formControlName="roleDetail"> Employee</label>
+                      <span class="text-danger"
+                            *ngIf="(f.roleDetail.touched || submitted) && f.roleDetail.errors?.required">
+                            Date of Joining cannot be empty
+                        </span>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="form-group left" >
+              <label for="choose-file" class="label-title" >Upload Profile Picture *</label>
+              <input type="file" id="choose-file" size="80" accept="image/*" required="required">
+            </div>
+
+          </div>
+      </div>
+  </div>
+
+
+  <div class="form-footer">
+    <span>* required</span>
+    <button type="submit" class="btn btn-block btn-primary">Create</button>
+    <a routerLink="/login" class="btn btn-link  btn-primary">Login instead</a>
+  </div>
+</form>
+
+

@@ -1,0 +1,150 @@
+<div class="ba-buttons-div">
+  <form [formGroup]="myProfileForm">
+    <div class="card p-3 text-center">
+      <div class="d-flex flex-row justify-content-center mb-3">
+        <div class="image">
+          <img
+            class="rounded-circle profile_img"
+            src="../../assets/images/male.png"
+          />
+        </div>
+        <div class="d-flex flex-column ms-3 user-details">
+          <h4 class="mb-0">
+            {{ this.userService.userName }}
+          </h4>
+        </div>
+      </div>
+      <h4 *ngIf="isEdit">Edit   Profile</h4>
+      <h4 *ngIf="!isEdit">Profile</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Full Name</label>
+            <input
+              ng-disabled="isEdit"
+              class="form-control"
+              type="text"
+              placeholder="Name"
+              formControlName="fullName"
+            />
+            <!-- <span
+              class="help-block"
+              *ngIf="
+                !myProfileForm.get('fullName')?.valid &&
+                myProfileForm.get('fullName')?.touched
+              "
+            >
+              Please enter valid Display Name!
+            </span> -->
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Email</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Email"
+              formControlName="email"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Mobile Number</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Mobile Number"
+              formControlName="contactNumber"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Address</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Address"
+              formControlName="address"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Date Of Birth</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Date Of Birth"
+              formControlName="dateOfBirth"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Date Of Joining</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Date Of Joining"
+              formControlName="dateOfJoining"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Password</label>
+            <input
+              class="form-control"
+              type="password"
+              placeholder="Password"
+              formControlName="password"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Confirm Password</label>
+            <input
+              class="form-control"
+              type="password"
+              placeholder="Confirm Password"
+              formControlName="confirmPassword"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Role Name</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Role Name"
+              formControlName="roleDetail"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mt-3 gap-2 d-flex justify-content-end">
+        <button class="px-3 btn btn-sm btn-outline-primary">Cancel</button>
+        <button
+          class="px-3 btn btn-sm btn-primary"
+          *ngIf="isEdit == true"
+          [disabled]="myProfileForm.invalid"
+          (click)="onSubmit()"
+        >
+          Save
+        </button>
+        <button
+          class="px-3 btn btn-sm btn-primary"
+          *ngIf="isEdit == false"
+          (click)="enableAllInputs()"
+        >
+          Edit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

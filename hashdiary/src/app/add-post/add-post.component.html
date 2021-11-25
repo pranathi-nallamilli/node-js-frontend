@@ -1,0 +1,12 @@
+
+<div class="dashboard">
+    <app-subheader class="subheader" [title]="'CREATE POST'"></app-subheader>
+<!-- <div class="dashboard-post">
+<app-dashpost *ngIf="todayBirthdaysUsers.length!=0" [title]="'Happy Birthday Dear Hashers !!'"  [type]="'Birthday'" [totalusers]="todayBirthdaysUsers" [currentDate]="currentdate"></app-dashpost>
+<app-dashpost *ngIf="todayAnniversaryUsers.length!=0" [title]="'Happy Work Anniversary Hashers !!'"  [type]="'Work Anniversary'" [totalusers]="todayAnniversaryUsers" [currentDate]="currentdate"></app-dashpost>
+</div> -->
+<div class="add-post">
+<app-postform [from]="'post'"></app-postform>
+</div>
+<app-upcoming-events class="dashboard-right-tab"></app-upcoming-events>
+</div>

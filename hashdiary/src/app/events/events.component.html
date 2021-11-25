@@ -1,0 +1,12 @@
+<div class="dashboard">
+    <app-subheader class="subheader" [title]="'EVENTS'"></app-subheader>
+<div *ngIf="loginUser?.roleDetail=='HR'" class="ba-buttons-div d-flex justify-content-end">
+    <button class="ba-button btn" routerLink="/addevent" type="button" ><div class="d-flex"><p><strong>Add Event: </strong></p><img src="assets/images/add.jpg" width="25" height="25" class="img-icon"></div></button>
+    </div>
+    <div class="overflow-auto parent-div" [ngClass]="getStyle()" *ngIf="type!=''">
+        <div  *ngFor="let post of totalposts">
+            <app-dashpost  [title]="post.postTitle"  [type]="'event'" [post]="post" [from]="'events'"></app-dashpost>
+        </div>
+        </div>
+<app-upcoming-events class="dashboard-right-tab" [type]="'Events'" [from]="'events'" [totalEvents]="totalEvents"></app-upcoming-events>
+</div>

@@ -1,0 +1,51 @@
+.dashpost
+{
+    border: 0.025em solid blue  ;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    width: 55em;
+    margin-left: 0.65em;
+}
+.dashbutton
+{
+    background-color: white;
+    width:100%;
+    border: 0.025em solid blue;
+}
+.dashpost-title
+{
+    font-family: snell;
+    font-size: 2em;
+    color: rgba(0,0,255,0.75);
+    margin-bottom: 1em;
+    margin-left: 0.25em;
+    text-align: left;
+}
+.post-date
+{
+    color: rgba(0,0,255,0.75);
+    margin-top: 0.45em; 
+}
+.profile_img
+{
+    border-radius: 50%;
+    width : 10em; 
+}
+.user-name
+{
+    margin-left: 2em;
+    margin-top: 5px;
+}
+.btn
+{
+    width: 55em;
+}
+.title-div
+{
+    width:52em;
+}
+.comments-tab
+{
+    background-color: white;
+    width: 100%;
+}

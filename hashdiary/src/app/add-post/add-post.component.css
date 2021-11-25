@@ -1,0 +1,31 @@
+.dashboard-post
+{
+    position: absolute;
+    top: 9.5em;
+    left: 16.8em;
+}
+.dashboard-right-tab
+{
+    position: absolute;
+    top: 3.2em;
+    left: 73.4em;
+    margin-top: 0.75em;
+}
+.subheader
+{
+    position: absolute;
+    top: 4.1em;
+    left:16.7em;
+}
+.add-post
+{
+    position: absolute;
+    top: 7.3em;
+    left: 16.8em;
+    width: 62.5%;
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+}

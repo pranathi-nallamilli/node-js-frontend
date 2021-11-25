@@ -1,0 +1,17 @@
+.subheader
+{
+    height: 3em;
+    background-image: linear-gradient(#B0B5F8,#150BD4);
+    width:56.7rem;
+  box-shadow: 2px 2px 2px blue, -2px -2px 2px blue;
+}
+.subheader-txt
+{
+    text-align: center;
+    color: white;
+    font-style: bold;
+    font-family: snell;
+    align-self: center;
+    vertical-align: center;
+    font-size: 2em;
+}

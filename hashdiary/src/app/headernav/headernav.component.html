@@ -1,0 +1,34 @@
+<div class="horizental-nav">
+  <nav class="navbar navbar-expand-lg navbar-light hashdiaryheader">
+    <div class="w-100 d-flex justify-content-between">
+      <a class="navbar-brand header-title" href="#">Hashedin Diary</a>
+      <div class="d-flex">
+      <a class="nav-link" routerLink="/profile"
+        ><img src="assets/images/profile.png" width="35px" height="35px"
+      /></a>
+      <a class="nav-link" routerLink="/login" (click)='setLogout()'><img class="exit-icon" src="assets/images/exit.png" width="35px" height="35px"
+      /></a>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="vertical-nav" id="grad">
+  <nav class="navbar maintab">
+    <ul class="nav navbar-nav">
+      <li class="nav-item list-item">
+        <a class="nav-link" routerLink="/dashboard" [ngClass]="{'link-text': type!='dashboard','link-click': type=='dashboard'}" (click)="setType('dashboard')"> Dashboard </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [ngClass]="{'link-text': type!='birthanniversary','link-click': type=='birthanniversary'}" (click)="setType('birthanniversary')" routerLink="/birthdayanniversary">
+          Birthday & Work Anniversary
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [ngClass]="{'link-text': type!='events','link-click': type=='events'}" (click)="setType('events')" routerLink="/events"> Events </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [ngClass]="{'link-text': type!='posts','link-click': type=='posts'}" (click)="setType('posts')" routerLink="/posts"> Posts </a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,18 @@
+
+<div class="dashboard">
+    <app-subheader class="subheader" [title]="'BIRTHDAY & WORK ANNIVERSARY'"></app-subheader>
+<!-- <div class="dashboard-post">
+<app-dashpost *ngIf="todayBirthdaysUsers.length!=0" [title]="'Happy Birthday Dear Hashers !!'"  [type]="'Birthday'" [totalusers]="todayBirthdaysUsers" [currentDate]="currentdate"></app-dashpost>
+<app-dashpost *ngIf="todayAnniversaryUsers.length!=0" [title]="'Happy Work Anniversary Hashers !!'"  [type]="'Work Anniversary'" [totalusers]="todayAnniversaryUsers" [currentDate]="currentdate"></app-dashpost>
+</div> -->
+<div class="ba-buttons-div d-flex justify-content-end">
+<a class="nav-link" [ngClass]="{'ba-button':type !='birthday','ba-clicked':type=='birthday'}" type="link" routerLink='/birthdayanniversary' (click)="getposts('birthday')">Birthdays</a>
+<a class="nav-link" [ngClass]="{'ba-button':type !='anniversary','ba-clicked':type=='anniversary'}"  type="link" routerLink='/birthdayanniversary' (click)="getposts('anniversary')">Work Anniversaries</a>
+</div>
+<div class="dashboard-post overflow-auto" *ngIf="type!=''">
+<div  *ngFor="let post of totalposts">
+    <app-dashpost  [title]="post.postTitle"  [type]="type" [post]="post" [from]="'birthday-anniversary'"></app-dashpost>
+</div>
+</div>
+<app-upcoming-events class="dashboard-right-tab"  [type]="title" [from]="'birthday-anniversary'" [totalUsers]="upcomingBirthdaysUsers"></app-upcoming-events>
+</div>

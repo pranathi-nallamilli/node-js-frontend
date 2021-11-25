@@ -1,0 +1,7 @@
+<div>
+  <div>
+    <app-login *ngIf="isUserLoggedIn()==false && isUserLoggedIn()==undefined"></app-login>
+  <app-headernav *ngIf="isUserLoggedIn()==true" ></app-headernav></div>
+<router-outlet class="routed-posts"></router-outlet>
+
+</div>

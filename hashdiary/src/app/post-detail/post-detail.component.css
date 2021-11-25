@@ -1,0 +1,124 @@
+.post-details
+{
+    border: 0.05em solid blue;
+    position: absolute;
+    top: 4.2em;
+    left: 17.2em;
+    width: 80%;
+    height: 100%;
+}
+.dashpost-title
+{
+    font-family: snell;
+    font-size: 2em;
+    color: rgba(0,0,255,0.75);
+    margin-bottom: 1em;
+    margin-left: 0.25em;
+    text-align: left;
+} 
+.left-grid
+{
+    
+    top: 0rem;
+    left: 0rem;
+    width:60%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    margin-top: 1%;
+    margin-left: 1%;
+}
+.right-grid
+{
+ width: 50%;
+ height: 100%;
+ margin-top: 1%;
+ margin-left: 1%;
+ /* border: 1px solid blue; */
+}
+.lower-tab
+{
+    position: absolute;
+    top:75%;
+    margin-left: 1%;
+    /* border: 1px solid blue;  */
+    width:98%;
+}
+.accept-deny
+{
+    position: absolute;
+    /* border: 1px solid blue; */
+    width: 20%;
+    left: 67%;
+}
+.textarea
+{
+    border:0.05em solid black;
+    margin-bottom: 1%;
+}
+.button-tab
+{
+    background-color: blue;
+    color: white;
+    font-style: bold;
+}
+.dashpost-description
+{
+    margin-bottom: 1em;
+    margin-left: 0.25em;
+    text-align: left;
+}
+.post-image
+{
+    width:200px;
+    height: 200px;
+}
+.comment-header
+{
+    color: rgba(0,0,255,0.75);
+    text-align: center;
+    background-color: #B0B5F8;
+    border: 0.01em solid black;
+    color:white;
+    margin-bottom: 0;
+}
+.comment-list
+{
+    position: absolute;
+    border: 1px solid black;
+    width: 98%;
+    top: 35%;
+    height: 40%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    background-color: #eeeeee
+}
+.comment-user
+{
+    color: hsl(210, 58%, 49%);
+    margin:0.1%;
+}
+.comment-creation
+{
+    color:#357EC7;
+    margin:0.1%;
+}
+.comment-listing
+{
+    border-bottom: 0.01em solid grey
+}
+.commentdesc
+{
+    margin:0.5%;
+}
+.accepted-event
+{
+ color: green;
+ font-size: 70%;
+ font-style: bold;
+}
+.denied-event
+{
+ color: red;
+ font-size: 70%;
+ font-style: bold;
+}

@@ -1,0 +1,36 @@
+.add-post{
+ height: 10em;
+ width:40em; 
+}
+.textbox
+{
+  width: 70%;
+  border: 0.05em solid black;
+}
+.textarea
+{
+  width: 70%;
+  border: 0.05em solid black;
+}
+.image-tab
+{
+    width: 10em;
+    height: 10em;
+}
+.event-date
+{
+  width: 70%;
+  border: 0.05em solid black;
+}
+.email
+{
+  width: 70%;
+  border: 0.05em solid black;
+}  
+.btn-lg
+{
+    background-color: blue;
+    font-family: Arial;
+    font-style: bold;
+    color:white;
+}

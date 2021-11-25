@@ -1,0 +1,47 @@
+.dashboard-post
+{
+    position: absolute;
+    top: 9.5em;
+    left: 16.8em;
+}
+.dashboard-right-tab
+{
+    position: absolute;
+    top: 3.2em;
+    left: 73.4em;
+    margin-top: 0.75em;
+}
+.subheader
+{
+    position: absolute;
+    top: 4.1em;
+    left:16.7em;
+}
+.ba-buttons-div
+{
+    position: absolute;
+    left: 16.7em;
+    top: 7.1em;
+    border-top: 0.025em solid purple;
+    border-bottom: 0.05em solid blue;
+    width: 56.7em;
+    background-image: linear-gradient(#B0B5F8,#150BD4);
+
+}
+.ba-button
+{
+    color:white;
+    height:2.5em;
+    background-image: linear-gradient(#B0B5F8,#150BD4);
+
+}
+.ba-clicked
+{
+    color:black;
+    box-shadow: 1px 1px 1px black; 
+    font-size: 110%;
+} 
+.parent-div
+{
+    height: 87%;
+}

@@ -1,0 +1,38 @@
+<div class="dashpost">
+<div *ngIf="from == 'dashboard'">
+<button class="dashbutton" (click)="setType()" routerLink="/birthdayanniversary">
+<!-- <div class="d-flex justify-content-between">
+        <p class="dashpost-title">{{ title }}</h5>
+</div> -->
+<div class="title-div d-flex justify-content-between">
+    <h5 class="dashpost-title">{{ title }}</h5>
+    <p class="post-date">{{ postDate }}</p>
+    </div>
+<div class="d-flex justify-content-around">
+<div class="BirthdayImages" *ngFor="let item of totalusers">
+<img class="profile_img" src="assets/images/male.png">
+<p class="user-name">{{ item.fullName }}</p>
+</div>
+</div>
+</button>
+</div>
+<div *ngIf="from != 'dashboard'">
+    <button class="btn" type="button" routerLink="/showpost" (click)="getPostDetail(post.postId,post.eventId,from)">
+        <div class="d-flex justify-content-around">
+        <div>
+        <div class="title-div d-flex justify-content-between">
+        <h5 class="dashpost-title">{{ title }}</h5>
+        <p class="post-date">{{ post.postCreationDate }}</p>
+        </div>
+        <p class="m-1">{{ post.description }}</p>
+        <p *ngIf="from=='events'"><strong>Event Date : {{ post.eventStartDate }}</strong></p>
+        <img [src]="post.imgUrl" width="200" height="150">
+        </div>
+        <img src="assets/images/getdetails.svg">
+    </div>
+    <div class="comments-tab">
+        <img src="assets/images/comment.png" width="20">
+    </div>
+    </button>
+    </div>
+</div>

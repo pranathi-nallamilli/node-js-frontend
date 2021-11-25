@@ -1,0 +1,60 @@
+<div class="post-details">
+<div class="main-tab">
+<div class="d-flex">
+<div class="left-grid">
+<p class="dashpost-title">
+    {{ post?.postTitle }}
+</p>
+<p class="dashpost-description">
+    {{ post?.description }}
+    </p>
+    <p *ngIf="from=='events'">
+      <strong>
+      Event Date :
+     {{ event?.eventStartDate }}
+    </strong>
+    </p>
+    <p *ngIf="from=='events'">
+      <strong>
+      Organizer Email :
+     {{ event?.organiserEmail }}
+    </strong>
+    </p>
+    </div>
+<div class="right-grid d-flex justify-content-center">
+  <img class="post-image" [src]="post?.imgUrl">
+</div>    
+</div>
+</div>
+<div *ngIf="from=='events' && isAccepted==undefined" class="accept-deny d-flex justify-content-around">
+  <button class="btn btn-lg btn-success" (click)="setResponse(true)">ACCEPT</button>
+  <button class="btn btn-lg btn-danger" (click)="setResponse(false)">DENY</button>
+</div>
+<div *ngIf="from=='events' && isAccepted!= undefined"class="accept-deny d-flex justify-content-around">
+  <p class="accepted-event" *ngIf="isAccepted"><strong>You accepted to participate in this event</strong></p>
+  <p class="denied-event" *ngIf="!isAccepted"><strong>You denied to participate in this event</strong></p>
+</div>
+<div class="comment-list overflow-auto">
+    <h5 class="comment-header">COMMENTS</h5>
+    <div class="comment-listing" *ngFor="let item of totalComments">
+     <div class="comment-details d-flex justify-content-between">
+     <p class="comment-user" *ngIf="loginUser?.userId==item.userId">You</p>
+     <p class="comment-user" *ngIf="loginUser?.userId!=item.userId">{{ item.userFullName }}</p>
+     <p class="comment-creation">{{ item.createdAt }}</p>
+     </div>
+     <div class="d-flex">
+       <p class="commentdesc">{{ item.commentDesc }}</p>
+       </div>
+    </div>
+
+    </div>
+    <form [formGroup]="commentForm">
+<div class="lower-tab">
+    <textarea class="form-control textarea" formControlName="commentDesc" rows="5" placeholder="Enter Your Comments"></textarea>
+    <div class="d-flex justify-content-between">
+    <button class="btn btn-lg button-tab" (click)="postComment()">COMMENT</button>
+    <button class="btn btn-lg button-tab">BACK</button>
+    </div>
+</div>
+</form>
+</div>
